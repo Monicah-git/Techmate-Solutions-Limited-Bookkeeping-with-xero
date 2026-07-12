@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techmate Solutions Ltd — Bookkeeping Case Study | Monicah Mburu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#173049;
+    --ink-soft:#4D6B87;
+    --paper:#EFF6FC;
+    --paper-alt:#E3EFF9;
+    --white:#FFFFFF;
+    --line: rgba(23,48,73,0.14);
+    --line-soft: rgba(23,48,73,0.08);
+    --brass:#3178AA;
+    --brass-deep:#1F5079;
+    --brass-soft:#DCEBF8;
+    --emerald:#1E6F6C;
+    --emerald-soft:#DFEEED;
+    --rust:#B25A34;
+    --rust-soft:#F5E3DA;
+    /* "dark" panels are now a soft, light blue tone instead of heavy navy */
+    --navy-deep:#DCEAF7;
+    --navy-mid:#E9F3FB;
+    --panel-ink:#173049;
+    --panel-ink-soft:#4D6B87;
+    --font-display:'Fraunces', serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 40px;
+  }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:12px;
+    font-weight:500;
+  }
+
+  /* ===================== HERO ===================== */
+  header.hero{
+    background: radial-gradient(1100px 620px at 82% -10%, var(--brass-soft) 0%, transparent 60%), var(--navy-deep);
+    color:var(--panel-ink);
+    position:relative;
+    overflow:hidden;
+    padding:56px 0 0 0;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom:60px;
+    position:relative;
+    z-index:2;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:12px;
+    font-family:var(--font-mono);
+    font-size:13px;
+    letter-spacing:0.08em;
+    color:var(--panel-ink-soft);
+  }
+  .brandmark .seal{
+    width:30px; height:30px; border-radius:50%;
+    border:1.4px solid var(--brass);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display); font-weight:650; font-size:14px;
+    color:var(--brass-deep);
+  }
+  .hero-nav{
+    display:flex; gap:28px;
+    font-size:13px;
+  }
+  .hero-nav a{
+    color:var(--panel-ink-soft);
+    text-decoration:none;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:color 0.15s ease, border-color 0.15s ease;
+  }
+  .hero-nav a:hover{
+    color:var(--brass-deep);
+    border-bottom-color:var(--brass);
+  }
+
+  .hero-eyebrow{color:var(--brass-deep); margin-bottom:22px; display:flex; align-items:center; gap:14px;}
+  .hero-eyebrow .rule{width:38px; height:1px; background:var(--brass); display:inline-block;}
+
+  h1.hero-title{
+    font-family:var(--font-display);
+    font-weight:560;
+    font-size:clamp(38px, 5.6vw, 68px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    margin:0 0 26px 0;
+    max-width:880px;
+    color:var(--panel-ink);
+  }
+  h1.hero-title em{
+    font-style:italic;
+    font-weight:450;
+    color:var(--brass-deep);
+  }
+
+  .hero-sub{
+    font-size:18px;
+    max-width:620px;
+    color:var(--panel-ink-soft);
+    margin:0 0 44px 0;
+    font-weight:400;
+  }
+
+  .hero-meta{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border-top:1px solid var(--line);
+    position:relative; z-index:2;
+  }
+  .hero-meta div{
+    padding:22px 26px;
+    border-right:1px solid var(--line);
+  }
+  .hero-meta div:last-child{border-right:none;}
+  .hero-meta .lbl{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--brass-deep);
+    margin-bottom:8px;
+  }
+  .hero-meta .val{
+    font-size:15px;
+    color:var(--panel-ink);
+    font-weight:500;
+  }
+
+  /* ===================== STAT STRIP ===================== */
+  section.stats{
+    background:var(--navy-mid);
+    position:relative;
+    z-index:2;
+    border-bottom:1px solid var(--line);
+  }
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+  }
+  .stat-cell{
+    padding:34px 26px 38px;
+    border-right:1px solid var(--line);
+  }
+  .stat-cell:last-child{border-right:none;}
+  .stat-num{
+    font-family:var(--font-display);
+    font-weight:560;
+    font-size:38px;
+    color:var(--brass-deep);
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .stat-cap{
+    font-size:13.5px;
+    color:var(--panel-ink-soft);
+    max-width:220px;
+  }
+
+  /* ===================== SECTION GENERIC ===================== */
+  section{ padding:96px 0; }
+  section.tight{padding:72px 0;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+    margin-bottom:48px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:26px;
+  }
+  .section-head .eyebrow{color:var(--brass-deep); margin-bottom:14px;}
+  .section-head h2{
+    font-family:var(--font-display);
+    font-weight:560;
+    font-size:clamp(28px,3.4vw,42px);
+    margin:0;
+    letter-spacing:-0.01em;
+    max-width:640px;
+  }
+  .section-head .head-note{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    max-width:280px;
+    text-align:right;
+  }
+
+  /* ===================== SCENARIO ===================== */
+  .scenario-grid{
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:60px;
+    align-items:start;
+  }
+  .scenario-grid p{
+    font-size:16.5px;
+    color:var(--ink-soft);
+    margin:0 0 20px 0;
+  }
+  .scenario-grid p.lead{
+    font-family:var(--font-display);
+    font-size:22px;
+    font-style:italic;
+    color:var(--ink);
+    line-height:1.5;
+    font-weight:450;
+  }
+  .fact-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 30px 10px;
+  }
+  .fact-card h3{
+    font-family:var(--font-mono);
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:0.12em;
+    color:var(--brass-deep);
+    margin:0 0 20px 0;
+  }
+  .fact-row{
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line-soft);
+    font-size:14px;
+  }
+  .fact-row .k{color:var(--ink-soft);}
+  .fact-row .v{font-weight:600; text-align:right;}
+
+  .pain-list{
+    margin-top:34px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .pain-item{
+    border:1px solid var(--line);
+    background:var(--white);
+    border-radius:12px;
+    padding:22px 22px 24px;
+  }
+  .pain-item .tag{
+    display:inline-block;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--rust);
+    background:var(--rust-soft);
+    padding:4px 9px;
+    border-radius:100px;
+    margin-bottom:14px;
+  }
+  .pain-item h4{
+    font-family:var(--font-display);
+    font-size:18px;
+    font-weight:560;
+    margin:0 0 8px 0;
+  }
+  .pain-item p{font-size:14px; color:var(--ink-soft); margin:0;}
+
+  /* ===================== WORK / AUDIT TRAIL ===================== */
+  section.work{background:var(--paper-alt);}
+  .work-intro{max-width:680px; margin-bottom:10px;}
+  .work-intro p{font-size:16px; color:var(--ink-soft);}
+
+  .trail{
+    position:relative;
+    margin-top:20px;
+  }
+  .trail::before{
+    content:"";
+    position:absolute;
+    left:29px;
+    top:14px;
+    bottom:14px;
+    width:1px;
+    background:var(--line);
+  }
+  .work-block{
+    position:relative;
+    padding:0 0 88px 84px;
+  }
+  .work-block:last-child{padding-bottom:0;}
+  .work-block .marker{
+    position:absolute;
+    left:0; top:0;
+    width:60px; height:60px;
+    border-radius:50%;
+    background:var(--white);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--brass-deep);
+    font-weight:600;
+    box-shadow:0 2px 10px rgba(16,31,51,0.06);
+  }
+  .work-block h3{
+    font-family:var(--font-display);
+    font-size:27px;
+    font-weight:560;
+    margin:2px 0 6px 0;
+  }
+  .work-block .kicker{
+    font-family:var(--font-mono);
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:0.1em;
+    color:var(--emerald);
+    margin-bottom:8px;
+    display:block;
+  }
+  .work-block .desc{
+    font-size:15.5px;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-bottom:26px;
+  }
+
+  .shot-row{
+    display:grid;
+    gap:24px;
+    margin-bottom:22px;
+  }
+  .shot-row.cols-1{grid-template-columns:1fr;}
+  .shot-row.cols-2{grid-template-columns:1fr 1fr;}
+  .shot-row.cols-3{grid-template-columns:1fr 1fr 1fr;}
+
+  figure{margin:0;}
+  .browser-frame{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(16,31,51,0.08);
+  }
+  .browser-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 14px;
+    background:#F5F3EC;
+    border-bottom:1px solid var(--line);
+  }
+  .browser-bar .dots{display:flex; gap:5px;}
+  .browser-bar .dots span{width:8px; height:8px; border-radius:50%; background:#D8D2C0;}
+  .browser-bar .crumb{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--ink-soft);
+    margin-left:8px;
+    letter-spacing:0.01em;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .browser-body{position:relative;}
+  .browser-body img{width:100%; display:block; cursor:zoom-in;}
+  .zoom-hint{
+    position:absolute;
+    right:14px; bottom:14px;
+    background:rgba(27,42,34,0.82);
+    color:#F7F5EE;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    padding:6px 11px;
+    border-radius:100px;
+    opacity:0;
+    transition:opacity 0.15s ease;
+    pointer-events:none;
+  }
+  .browser-frame:hover .zoom-hint{opacity:1;}
+
+  .lightbox{
+    position:fixed; inset:0;
+    background:rgba(20,26,20,0.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+    z-index:999;
+    cursor:zoom-out;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{
+    max-width:94vw;
+    max-height:88vh;
+    width:auto;
+    border-radius:8px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.5);
+    cursor:default;
+  }
+  .lightbox .lb-close{
+    position:absolute;
+    top:26px; right:34px;
+    color:#F7F5EE;
+    font-family:var(--font-mono);
+    font-size:13px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    border:1px solid rgba(247,245,238,0.4);
+    padding:8px 16px;
+    border-radius:100px;
+    cursor:pointer;
+  }
+  .lightbox .lb-caption{
+    position:absolute;
+    bottom:28px; left:50%;
+    transform:translateX(-50%);
+    color:#D8D2C0;
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    letter-spacing:0.04em;
+    text-align:center;
+    max-width:80vw;
+  }
+  figcaption{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:12px;
+    padding-left:2px;
+  }
+  figcaption b{color:var(--ink); font-weight:600;}
+
+  .callout{
+    border-left:3px solid var(--brass);
+    background:var(--brass-soft);
+    border-radius:0 10px 10px 0;
+    padding:18px 22px;
+    font-size:14.5px;
+    color:#5C4419;
+    margin-top:6px;
+  }
+  .callout b{color:var(--brass-deep);}
+  .callout.flag{
+    border-left-color:var(--rust);
+    background:var(--rust-soft);
+    color:#6B2E1D;
+  }
+  .callout.flag b{color:var(--rust);}
+  .callout.good{
+    border-left-color:var(--emerald);
+    background:var(--emerald-soft);
+    color:#123D2B;
+  }
+  .callout.good b{color:var(--emerald);}
+
+  .mini-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin:22px 0 26px;
+  }
+  .mini-stat{
+    border:1px solid var(--line);
+    background:var(--white);
+    border-radius:10px;
+    padding:16px 18px;
+  }
+  .mini-stat .n{
+    font-family:var(--font-mono);
+    font-weight:600;
+    font-size:19px;
+    color:var(--ink);
+  }
+  .mini-stat .l{font-size:12px; color:var(--ink-soft); margin-top:3px;}
+
+  .table-note{
+    font-size:14px;
+    color:var(--ink-soft);
+    border:1px dashed var(--line);
+    border-radius:10px;
+    padding:16px 20px;
+    margin-top:6px;
+  }
+
+  /* ===================== RESULTS / STAMP ===================== */
+  section.results{
+    background:var(--navy-deep);
+    color:var(--panel-ink);
+    position:relative;
+    overflow:hidden;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  section.results .section-head{border-bottom-color:var(--line);}
+  section.results .section-head h2{color:var(--panel-ink);}
+  section.results .eyebrow{color:var(--brass-deep);}
+  section.results .head-note{color:var(--panel-ink-soft);}
+
+  .stamp{
+    position:relative;
+    width:150px; height:150px;
+    border-radius:50%;
+    border:1.5px solid var(--brass);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    flex-shrink:0;
+    background:rgba(255,255,255,0.4);
+  }
+  .stamp::before{
+    content:"";
+    position:absolute; inset:9px;
+    border:1px dashed rgba(169,124,51,0.55);
+    border-radius:50%;
+  }
+  .stamp .inner{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.06em;
+    color:var(--brass-deep);
+    line-height:1.5;
+    padding:0 14px;
+  }
+  .stamp .inner b{
+    display:block;
+    font-family:var(--font-display);
+    font-size:26px;
+    font-weight:650;
+    color:var(--panel-ink);
+    letter-spacing:0;
+  }
+
+  .results-top{
+    display:flex;
+    gap:44px;
+    align-items:center;
+    margin-bottom:56px;
+    position:relative; z-index:2;
+  }
+  .results-top p{
+    font-size:16.5px;
+    color:var(--panel-ink-soft);
+    max-width:560px;
+    margin:0;
+  }
+
+  .impact-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    position:relative; z-index:2;
+  }
+  .impact-item{
+    background:var(--white);
+    padding:28px 30px;
+    display:flex;
+    gap:18px;
+  }
+  .impact-item .ico{
+    width:34px; height:34px;
+    border-radius:50%;
+    background:var(--brass-soft);
+    border:1px solid rgba(169,124,51,0.5);
+    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--brass-deep);
+  }
+  .impact-item h4{
+    font-family:var(--font-display);
+    font-weight:560;
+    font-size:17px;
+    margin:0 0 6px 0;
+    color:var(--panel-ink);
+  }
+  .impact-item p{
+    font-size:13.8px;
+    color:var(--panel-ink-soft);
+    margin:0;
+  }
+
+  /* ===================== PROCESS ===================== */
+  .process-strip{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .process-step{
+    padding:28px 22px;
+    border-right:1px solid var(--line);
+  }
+  .process-step:last-child{border-right:none;}
+  .process-step .num{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--brass-deep);
+    margin-bottom:14px;
+  }
+  .process-step h5{
+    font-family:var(--font-display);
+    font-size:17px;
+    font-weight:560;
+    margin:0 0 8px 0;
+  }
+  .process-step p{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  /* ===================== CTA / FOOTER ===================== */
+  section.cta{
+    background:var(--paper);
+    text-align:center;
+    padding:100px 0 60px;
+  }
+  section.cta h2{
+    font-family:var(--font-display);
+    font-weight:560;
+    font-size:clamp(30px,4vw,46px);
+    max-width:680px;
+    margin:0 auto 20px;
+    letter-spacing:-0.01em;
+  }
+  section.cta p{
+    font-size:16px;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto 34px;
+  }
+  .services-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:40px;
+  }
+  .service-pill{
+    font-family:var(--font-mono);
+    font-size:12px;
+    padding:9px 16px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    color:var(--ink-soft);
+    background:var(--white);
+  }
+  .cta-buttons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    background:var(--ink);
+    color:#F7F5EE;
+    font-weight:600;
+    font-size:14.5px;
+    padding:16px 34px;
+    border-radius:100px;
+    text-decoration:none;
+    letter-spacing:0.01em;
+    border:1px solid var(--ink);
+  }
+  .btn:hover{background:#26392D;}
+  .btn-secondary{
+    display:inline-block;
+    color:var(--ink);
+    font-weight:600;
+    font-size:14.5px;
+    text-decoration:underline;
+    text-underline-offset:4px;
+    text-decoration-color:var(--brass);
+  }
+  .btn-secondary:hover{color:var(--brass-deep);}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:30px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    font-family:var(--font-mono);
+  }
+
+  @media (max-width:980px){
+    .wrap{padding:0 22px;}
+    .hero-meta{grid-template-columns:repeat(2,1fr);}
+    .hero-meta div{border-bottom:1px solid var(--line);}
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+    .stat-cell{border-bottom:1px solid var(--line);}
+    .scenario-grid{grid-template-columns:1fr;}
+    .pain-list{grid-template-columns:1fr;}
+    .shot-row.cols-2, .shot-row.cols-3{grid-template-columns:1fr;}
+    .work-block{padding-left:60px;}
+    .impact-grid{grid-template-columns:1fr;}
+    .process-strip{grid-template-columns:1fr 1fr;}
+    .process-step{border-bottom:1px solid var(--line);}
+    .section-head{flex-direction:column; align-items:flex-start;}
+    .section-head .head-note{text-align:left;}
+    .hero-nav{display:none;}
+    .results-top{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-top">
+    <div class="brandmark">
+      <span class="seal">M</span>
+      MONICAH MBURU — OPERATIONS &amp; BOOKKEEPING
+    </div>
+    <nav class="hero-nav">
+      <a href="#scenario">Case Study</a>
+      <a href="#work">Scope of Work</a>
+      <a href="#results">Results</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <div class="hero-eyebrow eyebrow"><span class="rule"></span>BOOKKEEPING CASE STUDY — XERO</div>
+    <h1 class="hero-title">Turning a growing IT retailer's transaction chaos into <em>audit-ready</em> books.</h1>
+    <p class="hero-sub">A full-cycle bookkeeping engagement for Techmate Solutions Ltd — a Nairobi-based computer hardware retailer — covering chart of accounts design, receivables and payables management, payroll, expense controls, and monthly financial reporting inside Xero.</p>
+    <div class="hero-meta">
+      <div><div class="lbl">Client</div><div class="val">Techmate Solutions Ltd</div></div>
+      <div><div class="lbl">Industry</div><div class="val">IT Hardware Retail &amp; Resale</div></div>
+      <div><div class="lbl">Platform</div><div class="val">Xero Accounting</div></div>
+      <div><div class="lbl">Role</div><div class="val">Bookkeeper / Ops Support</div></div>
+    </div>
+  </div>
+
+  <section class="stats">
+    <div class="wrap">
+      <div class="stat-grid">
+        <div class="stat-cell">
+          <div class="stat-num">KES 17.9M</div>
+          <div class="stat-cap">Quarterly sales revenue tracked, coded and reported on (Jan – Mar)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">96.2%</div>
+          <div class="stat-cap">Gross profit margin surfaced through reconciled P&amp;L reporting</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">17</div>
+          <div class="stat-cap">Duplicate bill sets identified and flagged before payment</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">57</div>
+          <div class="stat-cap">Customer &amp; supplier contacts organized into a clean, working system</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<!-- ===================== THE BUSINESS ===================== -->
+<section id="scenario">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">01 · THE BUSINESS</div>
+        <h2>A hardware retailer outgrowing its own paperwork</h2>
+      </div>
+      <div class="head-note">Context on the client, the books, and why the engagement mattered.</div>
+    </div>
+
+    <div class="scenario-grid">
+      <div>
+        <p class="lead">Techmate Solutions Ltd sells and services laptops — Acer, ASUS, Dell, HP, Lenovo and Samsung — to corporate accounts, schools and individual buyers across Kenya.</p>
+        <p>The business was moving real volume: dozens of live invoices, purchase orders running through three hardware distributors, a five-person payroll, and two active bank accounts. But the books hadn't kept pace with the growth. Revenue was coming in faster than it was being reconciled, supplier bills were being entered from more than one source, and nobody had a single place to see who owed the business money — or who the business owed.</p>
+        <p>I was brought in to set up and run the bookkeeping function inside Xero from the ground up: build a proper chart of accounts, bring receivables and payables under control, get payroll running on a predictable cycle, and turn the raw transaction history into financial reports the owner could actually use to make decisions.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>Engagement Snapshot</h3>
+        <div class="fact-row"><span class="k">Business type</span><span class="v">Computer hardware retail &amp; resale</span></div>
+        <div class="fact-row"><span class="k">Bank accounts managed</span><span class="v">2 (operating + project)</span></div>
+        <div class="fact-row"><span class="k">Active contacts</span><span class="v">57 (55 customers · 2 suppliers)</span></div>
+        <div class="fact-row"><span class="k">Invoices on file</span><span class="v">46</span></div>
+        <div class="fact-row"><span class="k">Bills processed</span><span class="v">121</span></div>
+        <div class="fact-row"><span class="k">Purchase orders</span><span class="v">8, fully billed</span></div>
+        <div class="fact-row"><span class="k">Payroll</span><span class="v">5 employees, monthly</span></div>
+      </div>
+    </div>
+
+    <div class="pain-list">
+      <div class="pain-item">
+        <span class="tag">Receivables</span>
+        <h4>No visibility on overdue money</h4>
+        <p>KES 5.48M sitting in awaiting-payment invoices with no clear view of which customers were driving the balance.</p>
+      </div>
+      <div class="pain-item">
+        <span class="tag">Payables</span>
+        <h4>Bills entered more than once</h4>
+        <p>Supplier and staff-related bills were being logged from multiple sources, creating duplicate entries and payment risk.</p>
+      </div>
+      <div class="pain-item">
+        <span class="tag">Reporting</span>
+        <h4>No reporting rhythm</h4>
+        <p>Chart of accounts existed but wasn't being used consistently, so P&amp;L and budget reports couldn't be trusted month to month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE WORK ===================== -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">02 · THE WORK</div>
+        <h2>Rebuilding the books, one workflow at a time</h2>
+      </div>
+      <div class="head-note">Every screenshot below is pulled directly from the live Techmate Solutions Ltd workspace.</div>
+    </div>
+
+    <div class="trail">
+
+      <!-- Chart of Accounts -->
+      <div class="work-block">
+        <div class="marker">01</div>
+        <span class="kicker">Foundation</span>
+        <h3>Chart of accounts &amp; financial setup</h3>
+        <p class="desc">The first job on any bookkeeping engagement is the one clients never see: a chart of accounts that actually matches how the business operates. I structured accounts across Assets, Liabilities, Equity, Revenue and Expenses, coded each one, and set the correct tax treatment so every transaction downstream — invoices, bills, payroll, reports — lands in the right place automatically.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Techmate Solutions Ltd / Accounting / Chart of accounts</div></div>
+            <div class="browser-body"><img src="IMGDATA:02-chart-of-accounts" alt="Xero chart of accounts for Techmate Solutions Ltd"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <figcaption><b>Chart of accounts, coded and tax-rated.</b> Bank, expense, revenue and asset accounts are each assigned a code and tax rate — the backbone that keeps every later report accurate without manual correction.</figcaption>
+        <div class="callout" style="margin-top:18px;"><b>Why it matters —</b> a clean chart of accounts is what lets a business owner trust their P&amp;L on sight, instead of asking "but is this number actually right?"</div>
+      </div>
+
+      <!-- Inventory / Products -->
+      <div class="work-block">
+        <div class="marker">02</div>
+        <span class="kicker">Inventory</span>
+        <h3>Product &amp; inventory tracking</h3>
+        <p class="desc">Because Techmate sells physical stock, cost of goods sold needed to tie back to real inventory, not guesswork. I maintained the products and services catalogue — cost price, sale price and quantity on hand for every laptop model across six brands — so margin on every sale could be checked at a glance and stock levels stayed visible.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Techmate Solutions Ltd / Business / Products and services</div></div>
+            <div class="browser-body"><img src="IMGDATA:03-products-services" alt="Xero products and services list of laptop inventory"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <figcaption><b>Inventory catalogue by model.</b> Cost and sale price recorded side by side for every SKU, so gross margin per item is always one click away.</figcaption>
+      </div>
+
+      <!-- Contacts -->
+      <div class="work-block">
+        <div class="marker">03</div>
+        <span class="kicker">Relationships</span>
+        <h3>Customer &amp; supplier records</h3>
+        <p class="desc">A working set of contacts is what makes AR and AP chasing possible in the first place. I organized and maintained 57 contact records — 55 customers and 2 suppliers — complete with account numbers, emails and running balances, split into customer and supplier views with smart lists ready for aging and outstanding-balance follow-up.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Contacts / Customers</div></div>
+            <div class="browser-body"><img src="IMGDATA:04-contacts-customers" alt="Xero customer contact list"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Contacts / Suppliers</div></div>
+            <div class="browser-body"><img src="IMGDATA:05-contacts-suppliers" alt="Xero supplier contact list showing balances owed"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Contacts / All (57)</div></div>
+            <div class="browser-body"><img src="IMGDATA:06-contacts-all" alt="Xero all contacts view with smart lists for overdue and outstanding balances"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <figcaption><b>Customers, suppliers, and smart lists.</b> Built-in filters for "Outstanding &gt; 30 days" and "Overdue &gt; 7 days" turned the contact list into a working collections tool, not just an address book.</figcaption>
+      </div>
+
+      <!-- AR -->
+      <div class="work-block">
+        <div class="marker">04</div>
+        <span class="kicker">Accounts Receivable</span>
+        <h3>Invoicing &amp; collections</h3>
+        <p class="desc">I managed the full sales cycle — raising invoices, tracking approvals, and monitoring what was paid versus outstanding across 46 invoices. The sales dashboard made overdue exposure impossible to miss: KES 5.48M sitting in awaiting-payment invoices, concentrated in a small number of accounts.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Sales / Invoices</div></div>
+            <div class="browser-body"><img src="IMGDATA:07-invoices-list" alt="Xero list of sales invoices with statuses"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Sales overview</div></div>
+            <div class="browser-body"><img src="IMGDATA:08-sales-overview" alt="Xero sales overview dashboard with amounts owed and top debtors"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-stat"><div class="n">KES 5.48M</div><div class="l">Overdue across 4 invoices</div></div>
+          <div class="mini-stat"><div class="n">KES 4.30M</div><div class="l">Largest single balance — Innovative Tech</div></div>
+          <div class="mini-stat"><div class="n">46</div><div class="l">Invoices tracked to status</div></div>
+        </div>
+        <div class="callout good"><b>Insight surfaced —</b> three accounts (Innovative Tech, Green Valley Schools, Tech Support Ltd) accounted for the large majority of overdue receivables. That's the kind of finding a business owner can act on immediately — call three people, not forty-six.</div>
+      </div>
+
+      <!-- AP -->
+      <div class="work-block">
+        <div class="marker">05</div>
+        <span class="kicker">Accounts Payable</span>
+        <h3>Bills, purchase orders &amp; a real save</h3>
+        <p class="desc">On the payables side, I matched supplier bills against purchase orders raised with hardware distributors, kept 121 bills current, and reconciled staff reimbursements and payroll-linked entries separately from vendor payables so nothing got recorded twice.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Purchases / Bills</div></div>
+            <div class="browser-body"><img src="IMGDATA:09-bills" alt="Xero bills list flagging 17 sets of duplicate bills"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Purchases / Purchase orders</div></div>
+            <div class="browser-body"><img src="IMGDATA:10-purchase-orders" alt="Xero purchase orders list matched to hardware suppliers"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <div class="callout flag"><b>Duplicate bills caught —</b> Xero flagged 17 sets of potential duplicate bills sitting in the payables list. I reviewed each set line by line before anything was paid — catching double-entered supplier and staff bills that would otherwise have gone out as duplicate payments. This is the kind of control that protects cash, not just tidies records.</div>
+        <figcaption style="margin-top:16px;"><b>8 purchase orders, all billed and matched</b> against HP East Africa, Lenovo Kenya, Acer Africa and Samsung Electronics EA — ranging from KES 118,749 to KES 2.58M, every one reconciled to its supplier bill.</figcaption>
+      </div>
+
+      <!-- Expenses -->
+      <div class="work-block">
+        <div class="marker">06</div>
+        <span class="kicker">Expense Management</span>
+        <h3>Coded, reimbursable, and audit-ready</h3>
+        <p class="desc">Day-to-day spend — taxi fares, courier and shipping, printing, petty cash, office costs — was logged and coded to the correct expense account as it happened, each one tagged reimbursable and tied to a business purpose, so nothing sat unexplained at month end.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Expenses / Your own</div></div>
+            <div class="browser-body"><img src="IMGDATA:11-expenses" alt="Xero expense claims list with coded categories"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <figcaption><b>Every expense coded on entry.</b> Travel, shipping, office costs and stationery each carry a GL code and a plain-language description — so a reviewer never has to guess what a line item was for.</figcaption>
+      </div>
+
+      <!-- Payroll -->
+      <div class="work-block">
+        <div class="marker">07</div>
+        <span class="kicker">Payroll</span>
+        <h3>Running payroll on a predictable cycle</h3>
+        <p class="desc">I processed pay runs for a five-person team, keeping employee payments and statutory/other payments separated and consistent month over month, with every run closed out and marked paid on schedule.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Payroll / Pay runs</div></div>
+            <div class="browser-body"><img src="IMGDATA:12-payroll" alt="Xero payroll pay run history for three periods"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-stat"><div class="n">5</div><div class="l">Employees on payroll</div></div>
+          <div class="mini-stat"><div class="n">KES 347K</div><div class="l">Total pay run cost, per month</div></div>
+          <div class="mini-stat"><div class="n">3 / 3</div><div class="l">Consecutive pay runs closed on time</div></div>
+        </div>
+      </div>
+
+      <!-- Cash Monitoring -->
+      <div class="work-block">
+        <div class="marker">08</div>
+        <span class="kicker">Cash Flow</span>
+        <h3>A single dashboard for cash in, cash out</h3>
+        <p class="desc">With two active bank accounts and money moving in both directions daily, the owner needed one screen that answered "where do we stand right now?" — invoices owed to the business, bills due, and cash movement over time, all in one place.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Techmate Solutions Ltd / Dashboard</div></div>
+            <div class="browser-body"><img src="IMGDATA:01-dashboard" alt="Xero dashboard showing bank balances, invoices owed and bills due"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <figcaption><b>Live financial position.</b> KES 14.6M operating balance, KES 5.48M owed in by customers, KES 176,391 owed out to suppliers — visible on one screen instead of three spreadsheets.</figcaption>
+      </div>
+
+      <!-- Reporting -->
+      <div class="work-block">
+        <div class="marker">09</div>
+        <span class="kicker">Financial Reporting</span>
+        <h3>Reports the owner could actually use</h3>
+        <p class="desc">Bookkeeping only earns its keep once it turns into a decision. I closed the quarter with a full Profit &amp; Loss and a Budget Variance report — cross-checked against each other and against the dashboard — so every figure the owner saw could be trusted at face value.</p>
+        <div class="shot-row cols-1">
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Accounting / Reports / Profit and Loss</div></div>
+            <div class="browser-body"><img src="IMGDATA:14-profit-loss" alt="Xero profit and loss statement for Q1 2024"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+          <figure class="browser-frame">
+            <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Accounting / Reports / Budget Variance</div></div>
+            <div class="browser-body"><img src="IMGDATA:13-budget-variance" alt="Xero budget variance report comparing actuals to budget"><span class="zoom-hint">Click to enlarge</span></div>
+          </figure>
+        </div>
+        <div class="mini-stats">
+          <div class="mini-stat"><div class="n">+59.2%</div><div class="l">Sales ahead of budget, Q1</div></div>
+          <div class="mini-stat"><div class="n">96.2%</div><div class="l">Gross margin, Q1</div></div>
+          <div class="mini-stat"><div class="n">+300.9%</div><div class="l">Gross profit vs. budget</div></div>
+        </div>
+        <div class="callout good"><b>Why it matters —</b> the P&amp;L and Budget Variance report reconcile to the same sales, cost of sales and gross profit figures down to the shilling. That consistency is the real deliverable — it's what lets an owner make a hiring or purchasing decision off a report instead of a gut feeling.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESULTS ===================== -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">03 · THE OUTCOME</div>
+        <h2>What clean books actually changed</h2>
+      </div>
+      <div class="head-note">Measurable outcomes from the engagement, not just tidier screens.</div>
+    </div>
+
+    <div class="results-top">
+      <div class="stamp">
+        <div class="inner">VERIFIED<br>IN XERO<b>2024</b>RECONCILED</div>
+      </div>
+      <p>Every figure in this case study is pulled directly from the Techmate Solutions Ltd Xero workspace — nothing here is illustrative. That's the standard the engagement was held to, and the standard I hold every client's books to.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="ico">✓</div>
+        <div>
+          <h4>Cash protected before it left the business</h4>
+          <p>17 sets of duplicate bills reviewed and resolved before payment — preventing supplier and staff bills from being paid twice.</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="ico">✓</div>
+        <div>
+          <h4>Receivables became actionable</h4>
+          <p>KES 5.48M in overdue invoices traced to three named accounts, giving the owner a short, specific list to chase instead of a vague balance.</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="ico">✓</div>
+        <div>
+          <h4>Payables matched, not guessed</h4>
+          <p>121 bills reconciled against 8 purchase orders across four hardware distributors, with every PO carried through to a billed status.</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="ico">✓</div>
+        <div>
+          <h4>Payroll ran on rails</h4>
+          <p>Three consecutive pay runs for a five-person team closed accurately and on schedule, month after month.</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="ico">✓</div>
+        <div>
+          <h4>Reporting the owner could trust</h4>
+          <p>Quarterly P&amp;L and Budget Variance reports reconciling to the shilling — sales +59.2% and gross profit +300.9% ahead of budget, clearly explained.</p>
+        </div>
+      </div>
+      <div class="impact-item">
+        <div class="ico">✓</div>
+        <div>
+          <h4>A contact system built for follow-up</h4>
+          <p>57 customer and supplier records organized with smart lists for aging and overdue balances — ready to use, not just filed away.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="tight" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">04 · HOW I WORK</div>
+        <h2>The same process, every engagement</h2>
+      </div>
+      <div class="head-note">This is the sequence I follow on any bookkeeping cleanup or ongoing engagement — not just this one.</div>
+    </div>
+    <div class="process-strip">
+      <div class="process-step">
+        <div class="num">01</div>
+        <h5>Discover &amp; clean up</h5>
+        <p>Review existing records, flag duplicates and gaps, get the books to a trustworthy starting point.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">02</div>
+        <h5>Structure the accounts</h5>
+        <p>Build or repair the chart of accounts so every transaction has one correct home.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">03</div>
+        <h5>Systemize AR &amp; AP</h5>
+        <p>Get invoicing, bill entry and contact management running as a repeatable weekly rhythm.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">04</div>
+        <h5>Run payroll &amp; reconcile</h5>
+        <p>Process pay runs on schedule and reconcile every bank account to source.</p>
+      </div>
+      <div class="process-step">
+        <div class="num">05</div>
+        <h5>Report &amp; advise</h5>
+        <p>Deliver P&amp;L, balance sheet and variance reporting the owner can act on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--brass-deep); margin-bottom:18px;">WORK WITH ME</div>
+    <h2>Your books deserve the same clarity Techmate Solutions Ltd now has.</h2>
+    <p>I set up and run bookkeeping systems in Xero and QuickBooks Online for growing businesses — from first cleanup to ongoing monthly close.</p>
+    <div class="services-row">
+      <span class="service-pill">Bookkeeping Setup &amp; Cleanup</span>
+      <span class="service-pill">Accounts Receivable / Payable</span>
+      <span class="service-pill">Payroll Processing</span>
+      <span class="service-pill">Monthly Financial Reporting</span>
+      <span class="service-pill">Cash Flow Monitoring</span>
+      <span class="service-pill">Executive &amp; Ops Support</span>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn" href="https://calendly.com/monicahmburu/one-on-one" target="_blank" rel="noopener">Book a Free 1:1 Call →</a>
+      <a class="btn-secondary" href="mailto:monicahtheheadhunter@gmail.com">Or email me directly</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <span>© Monicah Mburu — Operations &amp; Bookkeeping Support</span>
+    <span>Case study built from live Xero workspace records</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-close" id="lbClose">Close ✕</div>
+  <img id="lbImg" src="" alt="Enlarged screenshot">
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<script>
+  (function(){
+    var lightbox = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
+    var lbCaption = document.getElementById('lbCaption');
+    var lbClose = document.getElementById('lbClose');
+
+    document.querySelectorAll('.browser-body img').forEach(function(img){
+      img.addEventListener('click', function(){
+        lbImg.src = img.src;
+        lbImg.alt = img.alt || '';
+        var frame = img.closest('.browser-frame');
+        var crumb = frame ? frame.querySelector('.crumb') : null;
+        lbCaption.textContent = crumb ? crumb.textContent : (img.alt || '');
+        lightbox.classList.add('open');
+      });
+    });
+
+    function closeLightbox(){ lightbox.classList.remove('open'); lbImg.src=''; }
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e){
+      if(e.target === lightbox){ closeLightbox(); }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ closeLightbox(); }
+    });
+  })();
+</script>
+
+</body>
+</html>
