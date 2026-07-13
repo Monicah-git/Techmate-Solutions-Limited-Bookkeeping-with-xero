@@ -42,7 +42,14 @@
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  img{max-width:100%; display:block;}
+  img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    image-rendering:auto;
+    display:block;
+    max-width:100%;
+  }
   a{color:inherit;}
 
   .wrap{
@@ -363,12 +370,13 @@
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 10px 30px rgba(16,31,51,0.08);
+    margin-bottom:16px;
   }
   .browser-bar{
     display:flex;
     align-items:center;
     gap:8px;
-    padding:10px 14px;
+    padding:14px 18px;
     background:#F5F3EC;
     border-bottom:1px solid var(--line);
   }
@@ -378,14 +386,14 @@
     font-family:var(--font-mono);
     font-size:10.5px;
     color:var(--ink-soft);
-    margin-left:8px;
+    margin-left:12px;
     letter-spacing:0.01em;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
   }
-  .browser-body{position:relative;}
-  .browser-body img{width:100%; display:block; cursor:zoom-in;}
+  .browser-body{position:relative; padding:28px 32px; background:var(--white);}
+  .browser-body img{width:100%; max-width:700px; height:auto; object-fit:contain; image-rendering:auto; display:block; cursor:zoom-in; margin:0 auto; border-radius:4px;}
   .zoom-hint{
     position:absolute;
     right:14px; bottom:14px;
@@ -418,6 +426,9 @@
     max-width:94vw;
     max-height:88vh;
     width:auto;
+    height:auto;
+    object-fit:contain;
+    image-rendering:auto;
     border-radius:8px;
     box-shadow:0 30px 80px rgba(0,0,0,0.5);
     cursor:default;
@@ -853,7 +864,7 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Techmate Solutions Ltd / Accounting / Chart of accounts</div></div>
-            <div class="browser-body"><img src="IMGDATA:02-chart-of-accounts" alt="Xero chart of accounts for Techmate Solutions Ltd"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/chart-of-accounts.png" alt="Xero chart of accounts for Techmate Solutions Ltd" width="1175" height="912" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <figcaption><b>Chart of accounts, coded and tax-rated.</b> Bank, expense, revenue and asset accounts are each assigned a code and tax rate — the backbone that keeps every later report accurate without manual correction.</figcaption>
@@ -868,7 +879,7 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Techmate Solutions Ltd / Business / Products and services</div></div>
-            <div class="browser-body"><img src="IMGDATA:03-products-services" alt="Xero products and services list of laptop inventory"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/products-services.png" alt="Xero products and services list of laptop inventory" width="1174" height="912" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <figcaption><b>Inventory catalogue by model.</b> Cost and sale price recorded side by side for every SKU, so gross margin per item is always one click away.</figcaption>
@@ -882,17 +893,17 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Contacts / Customers</div></div>
-            <div class="browser-body"><img src="IMGDATA:04-contacts-customers" alt="Xero customer contact list"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/contacts-customers.png" alt="Xero customer contact list" width="1171" height="912" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Contacts / Suppliers</div></div>
-            <div class="browser-body"><img src="IMGDATA:05-contacts-suppliers" alt="Xero supplier contact list showing balances owed"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/contacts-suppliers.png" alt="Xero supplier contact list showing balances owed" width="1184" height="911" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Contacts / All (57)</div></div>
-            <div class="browser-body"><img src="IMGDATA:06-contacts-all" alt="Xero all contacts view with smart lists for overdue and outstanding balances"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/contacts-all.png" alt="Xero all contacts view with smart lists for overdue and outstanding balances" width="1181" height="896" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <figcaption><b>Customers, suppliers, and smart lists.</b> Built-in filters for "Outstanding &gt; 30 days" and "Overdue &gt; 7 days" turned the contact list into a working collections tool, not just an address book.</figcaption>
@@ -906,11 +917,11 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Sales / Invoices</div></div>
-            <div class="browser-body"><img src="IMGDATA:07-invoices-list" alt="Xero list of sales invoices with statuses"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/invoices-list.png" alt="Xero list of sales invoices with statuses" width="1184" height="911" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Sales overview</div></div>
-            <div class="browser-body"><img src="IMGDATA:08-sales-overview" alt="Xero sales overview dashboard with amounts owed and top debtors"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/sales-overview.png" alt="Xero sales overview dashboard with amounts owed and top debtors" width="1178" height="912" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <div class="mini-stats">
@@ -929,11 +940,11 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Purchases / Bills</div></div>
-            <div class="browser-body"><img src="IMGDATA:09-bills" alt="Xero bills list flagging 17 sets of duplicate bills"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/bills-duplicates.png" alt="Xero bills list flagging 17 sets of duplicate bills" width="1178" height="912" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Purchases / Purchase orders</div></div>
-            <div class="browser-body"><img src="IMGDATA:10-purchase-orders" alt="Xero purchase orders list matched to hardware suppliers"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/purchase-orders.png" alt="Xero purchase orders list matched to hardware suppliers" width="1176" height="912" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <div class="callout flag"><b>Duplicate bills caught —</b> Xero flagged 17 sets of potential duplicate bills sitting in the payables list. I reviewed each set line by line before anything was paid — catching double-entered supplier and staff bills that would otherwise have gone out as duplicate payments. This is the kind of control that protects cash, not just tidies records.</div>
@@ -948,7 +959,7 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Business / Expenses / Your own</div></div>
-            <div class="browser-body"><img src="IMGDATA:11-expenses" alt="Xero expense claims list with coded categories"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/expense-claims.png" alt="Xero expense claims list with coded categories" width="1169" height="896" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <figcaption><b>Every expense coded on entry.</b> Travel, shipping, office costs and stationery each carry a GL code and a plain-language description — so a reviewer never has to guess what a line item was for.</figcaption>
@@ -962,7 +973,7 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Payroll / Pay runs</div></div>
-            <div class="browser-body"><img src="IMGDATA:12-payroll" alt="Xero payroll pay run history for three periods"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/payroll-pay-runs.png" alt="Xero payroll pay run history for three periods" width="1175" height="896" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <div class="mini-stats">
@@ -980,7 +991,7 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Techmate Solutions Ltd / Dashboard</div></div>
-            <div class="browser-body"><img src="IMGDATA:01-dashboard" alt="Xero dashboard showing bank balances, invoices owed and bills due"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/dashboard.png" alt="Xero dashboard showing bank balances, invoices owed and bills due" width="1141" height="928" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <figcaption><b>Live financial position.</b> KES 14.6M operating balance, KES 5.48M owed in by customers, KES 176,391 owed out to suppliers — visible on one screen instead of three spreadsheets.</figcaption>
@@ -994,11 +1005,11 @@
         <div class="shot-row cols-1">
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Accounting / Reports / Profit and Loss</div></div>
-            <div class="browser-body"><img src="IMGDATA:14-profit-loss" alt="Xero profit and loss statement for Q1 2024"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/profit-and-loss.png" alt="Xero profit and loss statement for Q1 2024" width="1200" height="900" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
           <figure class="browser-frame">
             <div class="browser-bar"><div class="dots"><span></span><span></span><span></span></div><div class="crumb">Accounting / Reports / Budget Variance</div></div>
-            <div class="browser-body"><img src="IMGDATA:13-budget-variance" alt="Xero budget variance report comparing actuals to budget"><span class="zoom-hint">Click to enlarge</span></div>
+            <div class="browser-body"><img src="images/budget-variance.png" alt="Xero budget variance report comparing actuals to budget" width="1178" height="912" loading="lazy" decoding="async"><span class="zoom-hint">Click to enlarge</span></div>
           </figure>
         </div>
         <div class="mini-stats">
@@ -1130,8 +1141,8 @@
       <span class="service-pill">Executive &amp; Ops Support</span>
     </div>
     <div class="cta-buttons">
-      <a class="btn" href="https://calendly.com/monicahmburu/one-on-one" target="_blank" rel="noopener">Book a Free 1:1 Call →</a>
-      <a class="btn-secondary" href="mailto:monicahtheadhunter@gmail.com">Or email me directly</a>
+      <a class="btn" href="https://calendly.com/monicahmburutheeva/30min" target="_blank" rel="noopener">Book a Free 1:1 Call →</a>
+      <a class="btn-secondary" href="mailto:monicahmburutheeva@gmail.com?subject=Bookkeeping%20Inquiry">Or email me directly</a>
     </div>
   </div>
 </section>
@@ -1180,5 +1191,3 @@
 
 </body>
 </html>
-
-
